@@ -9,7 +9,7 @@ public class client {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		 try{
-			//input - C:\\Users\\sevan\\Desktop\\input.txt
+			//input - from the drive or where the file you want to send 
 			 
 			 Socket s = new Socket("localhost", 3400);//connect to ServerSocket
 			 if(!s.isConnected())
@@ -17,7 +17,7 @@ public class client {
 			 else
 			     System.out.println("Socket Connection established : "+s.getInetAddress());
 			 
-			 BufferedReader br = new BufferedReader(new FileReader("C:\\Users\\sevan\\Desktop\\input.txt"));
+			 BufferedReader br = new BufferedReader(new FileReader("either a relative or local path"));
 			 long startTime = System.nanoTime();
 			 OutputStreamWriter os = new OutputStreamWriter(s.getOutputStream());
 			 PrintWriter out = new PrintWriter(os);
